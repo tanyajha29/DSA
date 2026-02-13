@@ -1,16 +1,18 @@
-﻿# LinkedList
+# LinkedList
 
 Placement-focused revision notes for LinkedList.
 
 ## Problems
 
-### 2. Add Two Numbers (Medium)
-LeetSync: [2-add-two-numbers](../2-add-two-numbers)
+<!-- AUTO-GENERATED START -->
 
-- **Pattern/Category:** Linked List
+### 2. Add Two Numbers (Medium)
+
+🔗 LeetCode Folder: [`2-add-two-numbers`](../../2-add-two-numbers)
+
+- **Pattern:** Linked List
 - **Time Complexity:** O(m+n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Simulate addition with carry while traversing both lists.
 
 ```java
 class Solution {
@@ -40,13 +42,13 @@ class Solution {
 }
 ```
 
-### 19. Remove Nth Node From End of List (Medium)
-LeetSync: [19-remove-nth-node-from-end-of-list](../19-remove-nth-node-from-end-of-list)
+### 19. Remove Nth Node From End Of List (Medium)
 
-- **Pattern/Category:** Two Pointers
+🔗 LeetCode Folder: [`19-remove-nth-node-from-end-of-list`](../../19-remove-nth-node-from-end-of-list)
+
+- **Pattern:** Two Pointers
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Advance fast pointer n steps, then move both to remove target.
 
 ```java
 /**
@@ -79,12 +81,12 @@ class Solution {
 ```
 
 ### 21. Merge Two Sorted Lists (Easy)
-LeetSync: [21-merge-two-sorted-lists](../21-merge-two-sorted-lists)
 
-- **Pattern/Category:** Linked List
+🔗 LeetCode Folder: [`21-merge-two-sorted-lists`](../../21-merge-two-sorted-lists)
+
+- **Pattern:** Linked List
 - **Time Complexity:** O(m+n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Merge nodes by always picking the smaller head.
 
 ```java
 /**
@@ -119,12 +121,12 @@ class Solution {
 ```
 
 ### 143. Reorder List (Medium)
-LeetSync: [143-reorder-list](../143-reorder-list)
 
-- **Pattern/Category:** Reverse + Merge
+🔗 LeetCode Folder: [`143-reorder-list`](../../143-reorder-list)
+
+- **Pattern:** Reverse + Merge
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Find middle, reverse second half, then merge alternating.
 
 ```java
 class Solution {
@@ -172,3 +174,4 @@ class Solution {
 }
 ```
 
+<!-- AUTO-GENERATED END -->

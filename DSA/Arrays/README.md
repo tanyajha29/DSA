@@ -1,16 +1,18 @@
-﻿# Arrays
+# Arrays
 
 Placement-focused revision notes for Arrays.
 
 ## Problems
 
-### 121. Best Time to Buy and Sell Stock (Easy)
-LeetSync: [121-best-time-to-buy-and-sell-stock](../121-best-time-to-buy-and-sell-stock)
+<!-- AUTO-GENERATED START -->
 
-- **Pattern/Category:** Greedy / One Pass
+### 121. Best Time To Buy And Sell Stock (Easy)
+
+🔗 LeetCode Folder: [`121-best-time-to-buy-and-sell-stock`](../../121-best-time-to-buy-and-sell-stock)
+
+- **Pattern:** Greedy / One Pass
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Track minimum price so far and maximize profit.
 
 ```java
 class Solution {
@@ -32,13 +34,13 @@ class Solution {
 }
 ```
 
-### 238. Product of Array Except Self (Medium)
-LeetSync: [238-product-of-array-except-self](../238-product-of-array-except-self)
+### 238. Product Of Array Except Self (Medium)
 
-- **Pattern/Category:** Prefix / Suffix
+🔗 LeetCode Folder: [`238-product-of-array-except-self`](../../238-product-of-array-except-self)
+
+- **Pattern:** Prefix / Suffix
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Build prefix products then multiply by running suffix product.
 
 ```java
 class Solution {
@@ -64,3 +66,4 @@ class Solution {
 }
 ```
 
+<!-- AUTO-GENERATED END -->

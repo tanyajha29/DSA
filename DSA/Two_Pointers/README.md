@@ -1,16 +1,18 @@
-﻿# Two_Pointers
+# Two_Pointers
 
 Placement-focused revision notes for Two_Pointers.
 
 ## Problems
 
-### 11. Container With Most Water (Medium)
-LeetSync: [11-container-with-most-water](../11-container-with-most-water)
+<!-- AUTO-GENERATED START -->
 
-- **Pattern/Category:** Two Pointers
+### 11. Container With Most Water (Medium)
+
+🔗 LeetCode Folder: [`11-container-with-most-water`](../../11-container-with-most-water)
+
+- **Pattern:** Two Pointers
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Move the pointer at the shorter height to improve area.
 
 ```java
 class Solution {
@@ -41,13 +43,13 @@ class Solution {
 }
 ```
 
-### 15. 3Sum (Medium)
-LeetSync: [15-3sum](../15-3sum)
+### 15. 3sum (Medium)
 
-- **Pattern/Category:** Sorting + Two Pointers
+🔗 LeetCode Folder: [`15-3sum`](../../15-3sum)
+
+- **Pattern:** Sorting + Two Pointers
 - **Time Complexity:** O(n^2)
 - **Space Complexity:** O(1)
-- **Key Idea:** Sort the array, fix i, and use two pointers while skipping duplicates.
 
 ```java
 class Solution {
@@ -91,3 +93,4 @@ class Solution {
 }
 ```
 
+<!-- AUTO-GENERATED END -->

@@ -1,16 +1,18 @@
-﻿# Sliding_Window
+# Sliding_Window
 
 Placement-focused revision notes for Sliding_Window.
 
 ## Problems
 
-### 3. Longest Substring Without Repeating Characters (Medium)
-LeetSync: [3-longest-substring-without-repeating-characters](../3-longest-substring-without-repeating-characters)
+<!-- AUTO-GENERATED START -->
 
-- **Pattern/Category:** Sliding Window
+### 3. Longest Substring Without Repeating Characters (Medium)
+
+🔗 LeetCode Folder: [`3-longest-substring-without-repeating-characters`](../../3-longest-substring-without-repeating-characters)
+
+- **Pattern:** Sliding Window
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(1)
-- **Key Idea:** Track last seen index and shift window start when a repeat appears.
 
 ```java
 class Solution {
@@ -38,3 +40,4 @@ public class Main {
 }
 ```
 
+<!-- AUTO-GENERATED END -->

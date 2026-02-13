@@ -1,16 +1,18 @@
-﻿# Hashing
+# Hashing
 
 Placement-focused revision notes for Hashing.
 
 ## Problems
 
-### 1. Two Sum (Easy)
-LeetSync: [1-two-sum](../1-two-sum)
+<!-- AUTO-GENERATED START -->
 
-- **Pattern/Category:** Hashing
+### 1. Two Sum (Easy)
+
+🔗 LeetCode Folder: [`1-two-sum`](../../1-two-sum)
+
+- **Pattern:** Hashing
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(n)
-- **Key Idea:** Use a hash map to store value -> index and check complements.
 
 ```java
 import java.util.HashMap;
@@ -48,12 +50,12 @@ class Solution {
 ```
 
 ### 49. Group Anagrams (Medium)
-LeetSync: [49-group-anagrams](../49-group-anagrams)
 
-- **Pattern/Category:** Sorting / Hashing
+🔗 LeetCode Folder: [`49-group-anagrams`](../../49-group-anagrams)
+
+- **Pattern:** Sorting / Hashing
 - **Time Complexity:** O(n * k log k)
 - **Space Complexity:** O(nk)
-- **Key Idea:** Sort each string to a canonical key and group together.
 
 ```java
 class Solution {
@@ -92,3 +94,4 @@ class Solution {
 }
 ```
 
+<!-- AUTO-GENERATED END -->

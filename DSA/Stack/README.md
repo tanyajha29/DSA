@@ -1,16 +1,18 @@
-﻿# Stack
+# Stack
 
 Placement-focused revision notes for Stack.
 
 ## Problems
 
-### 20. Valid Parentheses (Easy)
-LeetSync: [20-valid-parentheses](../20-valid-parentheses)
+<!-- AUTO-GENERATED START -->
 
-- **Pattern/Category:** Stack
+### 20. Valid Parentheses (Easy)
+
+🔗 LeetCode Folder: [`20-valid-parentheses`](../../20-valid-parentheses)
+
+- **Pattern:** Stack
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(n)
-- **Key Idea:** Push opening brackets and match with closing brackets.
 
 ```java
 class Solution {
@@ -35,13 +37,13 @@ class Solution {
 }
 ```
 
-### 84. Largest Rectangle in Histogram (Hard)
-LeetSync: [84-largest-rectangle-in-histogram](../84-largest-rectangle-in-histogram)
+### 84. Largest Rectangle In Histogram (Hard)
 
-- **Pattern/Category:** Monotonic Stack
+🔗 LeetCode Folder: [`84-largest-rectangle-in-histogram`](../../84-largest-rectangle-in-histogram)
+
+- **Pattern:** Monotonic Stack
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(n)
-- **Key Idea:** Maintain increasing stack; compute area when a shorter bar appears.
 
 ```java
 class Solution {
@@ -64,3 +66,4 @@ class Solution {
 }
 ```
 
+<!-- AUTO-GENERATED END -->
