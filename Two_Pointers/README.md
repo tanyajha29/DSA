@@ -4,8 +4,8 @@ Placement-focused revision notes for Two_Pointers.
 
 ## Problems
 
-### 11. Container With Most Water (Unknown)
-🔗 LeetSync: [11-container-with-most-water](../11-container-with-most-water)
+### 11. Container With Most Water (Medium)
+LeetSync: [11-container-with-most-water](../11-container-with-most-water)
 
 - **Pattern/Category:** Two Pointers
 - **Time Complexity:** O(n)
@@ -41,8 +41,8 @@ class Solution {
 }
 ```
 
-### 15. 3Sum (Unknown)
-🔗 LeetSync: [15-3sum](../15-3sum)
+### 15. 3Sum (Medium)
+LeetSync: [15-3sum](../15-3sum)
 
 - **Pattern/Category:** Sorting + Two Pointers
 - **Time Complexity:** O(n^2)

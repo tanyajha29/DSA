@@ -4,8 +4,8 @@ Placement-focused revision notes for Arrays.
 
 ## Problems
 
-### 121. Best Time to Buy and Sell Stock (Unknown)
-🔗 LeetSync: [121-best-time-to-buy-and-sell-stock](../121-best-time-to-buy-and-sell-stock)
+### 121. Best Time to Buy and Sell Stock (Easy)
+LeetSync: [121-best-time-to-buy-and-sell-stock](../121-best-time-to-buy-and-sell-stock)
 
 - **Pattern/Category:** Greedy / One Pass
 - **Time Complexity:** O(n)
@@ -32,8 +32,8 @@ class Solution {
 }
 ```
 
-### 238. Product of Array Except Self (Unknown)
-🔗 LeetSync: [238-product-of-array-except-self](../238-product-of-array-except-self)
+### 238. Product of Array Except Self (Medium)
+LeetSync: [238-product-of-array-except-self](../238-product-of-array-except-self)
 
 - **Pattern/Category:** Prefix / Suffix
 - **Time Complexity:** O(n)

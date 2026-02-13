@@ -4,8 +4,8 @@ Placement-focused revision notes for LinkedList.
 
 ## Problems
 
-### 2. Add Two Numbers (Unknown)
-🔗 LeetSync: [2-add-two-numbers](../2-add-two-numbers)
+### 2. Add Two Numbers (Medium)
+LeetSync: [2-add-two-numbers](../2-add-two-numbers)
 
 - **Pattern/Category:** Linked List
 - **Time Complexity:** O(m+n)
@@ -40,8 +40,8 @@ class Solution {
 }
 ```
 
-### 19. Remove Nth Node From End of List (Unknown)
-🔗 LeetSync: [19-remove-nth-node-from-end-of-list](../19-remove-nth-node-from-end-of-list)
+### 19. Remove Nth Node From End of List (Medium)
+LeetSync: [19-remove-nth-node-from-end-of-list](../19-remove-nth-node-from-end-of-list)
 
 - **Pattern/Category:** Two Pointers
 - **Time Complexity:** O(n)
@@ -78,8 +78,8 @@ class Solution {
 }
 ```
 
-### 21. Merge Two Sorted Lists (Unknown)
-🔗 LeetSync: [21-merge-two-sorted-lists](../21-merge-two-sorted-lists)
+### 21. Merge Two Sorted Lists (Easy)
+LeetSync: [21-merge-two-sorted-lists](../21-merge-two-sorted-lists)
 
 - **Pattern/Category:** Linked List
 - **Time Complexity:** O(m+n)
@@ -118,8 +118,8 @@ class Solution {
 }
 ```
 
-### 143. Reorder List (Unknown)
-🔗 LeetSync: [143-reorder-list](../143-reorder-list)
+### 143. Reorder List (Medium)
+LeetSync: [143-reorder-list](../143-reorder-list)
 
 - **Pattern/Category:** Reverse + Merge
 - **Time Complexity:** O(n)

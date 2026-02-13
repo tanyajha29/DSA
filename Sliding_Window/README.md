@@ -4,8 +4,8 @@ Placement-focused revision notes for Sliding_Window.
 
 ## Problems
 
-### 3. Longest Substring Without Repeating Characters (Unknown)
-🔗 LeetSync: [3-longest-substring-without-repeating-characters](../3-longest-substring-without-repeating-characters)
+### 3. Longest Substring Without Repeating Characters (Medium)
+LeetSync: [3-longest-substring-without-repeating-characters](../3-longest-substring-without-repeating-characters)
 
 - **Pattern/Category:** Sliding Window
 - **Time Complexity:** O(n)

@@ -4,8 +4,8 @@ Placement-focused revision notes for Stack.
 
 ## Problems
 
-### 20. Valid Parentheses (Unknown)
-🔗 LeetSync: [20-valid-parentheses](../20-valid-parentheses)
+### 20. Valid Parentheses (Easy)
+LeetSync: [20-valid-parentheses](../20-valid-parentheses)
 
 - **Pattern/Category:** Stack
 - **Time Complexity:** O(n)
@@ -35,8 +35,8 @@ class Solution {
 }
 ```
 
-### 84. Largest Rectangle in Histogram (Unknown)
-🔗 LeetSync: [84-largest-rectangle-in-histogram](../84-largest-rectangle-in-histogram)
+### 84. Largest Rectangle in Histogram (Hard)
+LeetSync: [84-largest-rectangle-in-histogram](../84-largest-rectangle-in-histogram)
 
 - **Pattern/Category:** Monotonic Stack
 - **Time Complexity:** O(n)

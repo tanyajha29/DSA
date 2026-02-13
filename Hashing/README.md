@@ -4,8 +4,8 @@ Placement-focused revision notes for Hashing.
 
 ## Problems
 
-### 1. Two Sum (Unknown)
-🔗 LeetSync: [1-two-sum](../1-two-sum)
+### 1. Two Sum (Easy)
+LeetSync: [1-two-sum](../1-two-sum)
 
 - **Pattern/Category:** Hashing
 - **Time Complexity:** O(n)
@@ -47,8 +47,8 @@ class Solution {
 }
 ```
 
-### 49. Group Anagrams (Unknown)
-🔗 LeetSync: [49-group-anagrams](../49-group-anagrams)
+### 49. Group Anagrams (Medium)
+LeetSync: [49-group-anagrams](../49-group-anagrams)
 
 - **Pattern/Category:** Sorting / Hashing
 - **Time Complexity:** O(n * k log k)
