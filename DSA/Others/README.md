@@ -1,6 +1,6 @@
 # Others
 
-Placement-focused revision notes for Others.
+DSA revision notes for Others.
 
 ## Problems
 
