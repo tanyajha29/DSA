@@ -1,6 +1,4 @@
-# Others
-
-DSA revision notes for Others.
+# Other Problem Solutions
 
 ## Problems
 
