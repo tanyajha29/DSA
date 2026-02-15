@@ -235,8 +235,12 @@ def main() -> None:
     if DSA_DIR.exists():
         for topic_dir in DSA_DIR.iterdir():
             readme = topic_dir / "README.md"
-            if readme.exists():
-                existing_meta.update(parse_existing_metadata(readme.read_text(encoding="utf-8", errors="ignore")))
+            if not readme.exists():
+                continue
+            text = readme.read_text(encoding="utf-8", errors="ignore")
+            # Only parse metadata from our auto-generated topic READMEs.
+            if AUTO_START in text and AUTO_END in text:
+                existing_meta.update(parse_existing_metadata(text))
 
     # Build problem entries from LeetSync folders.
     problems_by_topic: Dict[str, Dict[str, ProblemEntry]] = {}
