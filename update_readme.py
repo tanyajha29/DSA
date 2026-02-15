@@ -7,8 +7,9 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 # ---------- CONFIG ----------
-# Root DSA folder where topic READMEs live.
-DSA_FOLDER = "DSA"
+# Root folder where topic READMEs live.
+# Set to "." to keep topic folders at the repo root.
+DSA_FOLDER = "."
 
 # Auto-generated section markers inside each topic README.
 AUTO_START = "<!-- AUTO-GENERATED START -->"
@@ -292,3 +293,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

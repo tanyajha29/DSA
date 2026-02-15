@@ -8,7 +8,7 @@ Placement-focused revision notes for LinkedList.
 
 ### 2. Add Two Numbers (Medium)
 
-🔗 LeetCode Folder: [`2-add-two-numbers`](../../2-add-two-numbers)
+🔗 LeetCode Folder: [`2-add-two-numbers`](../2-add-two-numbers)
 
 - **Pattern:** Linked List
 - **Time Complexity:** O(m+n)
@@ -44,7 +44,7 @@ class Solution {
 
 ### 19. Remove Nth Node From End Of List (Medium)
 
-🔗 LeetCode Folder: [`19-remove-nth-node-from-end-of-list`](../../19-remove-nth-node-from-end-of-list)
+🔗 LeetCode Folder: [`19-remove-nth-node-from-end-of-list`](../19-remove-nth-node-from-end-of-list)
 
 - **Pattern:** Two Pointers
 - **Time Complexity:** O(n)
@@ -82,7 +82,7 @@ class Solution {
 
 ### 21. Merge Two Sorted Lists (Easy)
 
-🔗 LeetCode Folder: [`21-merge-two-sorted-lists`](../../21-merge-two-sorted-lists)
+🔗 LeetCode Folder: [`21-merge-two-sorted-lists`](../21-merge-two-sorted-lists)
 
 - **Pattern:** Linked List
 - **Time Complexity:** O(m+n)
@@ -122,7 +122,7 @@ class Solution {
 
 ### 143. Reorder List (Medium)
 
-🔗 LeetCode Folder: [`143-reorder-list`](../../143-reorder-list)
+🔗 LeetCode Folder: [`143-reorder-list`](../143-reorder-list)
 
 - **Pattern:** Reverse + Merge
 - **Time Complexity:** O(n)

@@ -8,7 +8,7 @@ Placement-focused revision notes for Arrays.
 
 ### 121. Best Time To Buy And Sell Stock (Easy)
 
-🔗 LeetCode Folder: [`121-best-time-to-buy-and-sell-stock`](../../121-best-time-to-buy-and-sell-stock)
+🔗 LeetCode Folder: [`121-best-time-to-buy-and-sell-stock`](../121-best-time-to-buy-and-sell-stock)
 
 - **Pattern:** Greedy / One Pass
 - **Time Complexity:** O(n)
@@ -36,7 +36,7 @@ class Solution {
 
 ### 238. Product Of Array Except Self (Medium)
 
-🔗 LeetCode Folder: [`238-product-of-array-except-self`](../../238-product-of-array-except-self)
+🔗 LeetCode Folder: [`238-product-of-array-except-self`](../238-product-of-array-except-self)
 
 - **Pattern:** Prefix / Suffix
 - **Time Complexity:** O(n)

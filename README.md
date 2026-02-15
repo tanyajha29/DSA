@@ -1,25 +1,25 @@
 ﻿# DSA for Campus Placements
 
-LeetSync auto-generates problem folders at the repo root. Topic-wise revision notes live in `DSA/` and are updated by `update_readme.py`.
+LeetSync auto-generates problem folders at the repo root. Topic-wise revision notes live in the root topic folders and are updated by `update_readme.py`.
 
 ## Structure
 - LeetSync problem folders: `123-problem-name/`
-- Topic folders: `DSA/Arrays/`, `DSA/LinkedList/`, `DSA/Stack/`, `DSA/Queue/`, `DSA/Two_Pointers/`, `DSA/Sliding_Window/`, `DSA/Hashing/`, `DSA/Recursion_Backtracking/`, `DSA/Trees/`, `DSA/Graph/`, `DSA/Trie/`
+- Topic folders: `Arrays/`, `LinkedList/`, `Stack/`, `Queue/`, `Two_Pointers/`, `Sliding_Window/`, `Hashing/`, `Recursion_Backtracking/`, `Trees/`, `Graph/`, `Trie/`, `Others/`
 - Automation: `update_readme.py`, `.github/workflows/auto-update.yml`
 
 ## Topic Index
-- [Arrays](DSA/Arrays/README.md)
-- [LinkedList](DSA/LinkedList/README.md)
-- [Stack](DSA/Stack/README.md)
-- [Queue](DSA/Queue/README.md)
-- [Two_Pointers](DSA/Two_Pointers/README.md)
-- [Sliding_Window](DSA/Sliding_Window/README.md)
-- [Hashing](DSA/Hashing/README.md)
-- [Recursion_Backtracking](DSA/Recursion_Backtracking/README.md)
-- [Trees](DSA/Trees/README.md)
-- [Graph](DSA/Graph/README.md)
-- [Trie](DSA/Trie/README.md)
-- [Others](DSA/Others/README.md)
+- [Arrays](Arrays/README.md)
+- [LinkedList](LinkedList/README.md)
+- [Stack](Stack/README.md)
+- [Queue](Queue/README.md)
+- [Two_Pointers](Two_Pointers/README.md)
+- [Sliding_Window](Sliding_Window/README.md)
+- [Hashing](Hashing/README.md)
+- [Recursion_Backtracking](Recursion_Backtracking/README.md)
+- [Trees](Trees/README.md)
+- [Graph](Graph/README.md)
+- [Trie](Trie/README.md)
+- [Others](Others/README.md)
 
 ## Workflow
 - Solve on LeetCode (LeetSync auto-saves).

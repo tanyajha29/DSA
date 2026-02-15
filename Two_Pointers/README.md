@@ -8,7 +8,7 @@ Placement-focused revision notes for Two_Pointers.
 
 ### 11. Container With Most Water (Medium)
 
-🔗 LeetCode Folder: [`11-container-with-most-water`](../../11-container-with-most-water)
+🔗 LeetCode Folder: [`11-container-with-most-water`](../11-container-with-most-water)
 
 - **Pattern:** Two Pointers
 - **Time Complexity:** O(n)
@@ -45,7 +45,7 @@ class Solution {
 
 ### 15. 3sum (Medium)
 
-🔗 LeetCode Folder: [`15-3sum`](../../15-3sum)
+🔗 LeetCode Folder: [`15-3sum`](../15-3sum)
 
 - **Pattern:** Sorting + Two Pointers
 - **Time Complexity:** O(n^2)

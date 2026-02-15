@@ -1,4 +1,6 @@
-# Other Problem Solutions
+﻿# Others
+
+Placement-focused revision notes for Others.
 
 ## Problems
 
@@ -6,7 +8,7 @@
 
 ### 9. Palindrome Number (Easy)
 
-🔗 LeetCode Folder: [`9-palindrome-number`](../../9-palindrome-number)
+ðŸ”— LeetCode Folder: [`9-palindrome-number`](../9-palindrome-number)
 
 - **Pattern:** General
 - **Time Complexity:** TBD
@@ -71,3 +73,4 @@ class Solution {
 ```
 
 <!-- AUTO-GENERATED END -->
+

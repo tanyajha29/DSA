@@ -8,7 +8,7 @@ Placement-focused revision notes for Sliding_Window.
 
 ### 3. Longest Substring Without Repeating Characters (Medium)
 
-🔗 LeetCode Folder: [`3-longest-substring-without-repeating-characters`](../../3-longest-substring-without-repeating-characters)
+🔗 LeetCode Folder: [`3-longest-substring-without-repeating-characters`](../3-longest-substring-without-repeating-characters)
 
 - **Pattern:** Sliding Window
 - **Time Complexity:** O(n)
