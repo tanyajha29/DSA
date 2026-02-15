@@ -6,6 +6,39 @@ Placement-focused revision notes for Others.
 
 <!-- AUTO-GENERATED START -->
 
+### 7. Reverse Integer (Medium)
+
+🔗 LeetCode Folder: [`7-reverse-integer`](../7-reverse-integer)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int reverse(int x) {
+        int rev=0;
+
+        while(x!=0){
+            int digit=x%10;
+
+            //positive overflow
+            if(rev > Integer.MAX_VALUE/10||(rev==Integer.MAX_VALUE/10 && digit>7) )
+            return 0;
+
+            //negative overflow
+             if( rev< Integer.MIN_VALUE/10||(rev==Integer.MIN_VALUE/10 && digit<-8) )
+            return 0;
+
+
+            rev= rev*10+digit;
+            x=x/10;
+        };
+        return rev;
+    }
+}
+```
+
 ### 9. Palindrome Number (Easy)
 
 🔗 LeetCode Folder: [`9-palindrome-number`](../9-palindrome-number)
