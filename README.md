@@ -1,4 +1,4 @@
-﻿# DSA for Campus Placements
+﻿# DSA Leetcode Solutions
 
 LeetSync auto-generates problem folders at the repo root. Topic-wise revision notes live in the root topic folders and are updated by `update_readme.py`.
 
