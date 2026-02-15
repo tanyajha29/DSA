@@ -8,7 +8,7 @@ Placement-focused revision notes for Others.
 
 ### 9. Palindrome Number (Easy)
 
-ðŸ”— LeetCode Folder: [`9-palindrome-number`](../9-palindrome-number)
+🔗 LeetCode Folder: [`9-palindrome-number`](../9-palindrome-number)
 
 - **Pattern:** General
 - **Time Complexity:** TBD
@@ -32,7 +32,7 @@ class Solution {
 
 ### 13. Roman To Integer (Easy)
 
-🔗 LeetCode Folder: [`13-roman-to-integer`](../../13-roman-to-integer)
+🔗 LeetCode Folder: [`13-roman-to-integer`](../13-roman-to-integer)
 
 - **Pattern:** General
 - **Time Complexity:** TBD
@@ -73,4 +73,3 @@ class Solution {
 ```
 
 <!-- AUTO-GENERATED END -->
-
