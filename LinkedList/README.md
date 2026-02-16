@@ -6,6 +6,46 @@ Placement-focused revision notes for LinkedList.
 
 <!-- AUTO-GENERATED START -->
 
+### 141. Linked List Cycle (Easy)
+
+🔗 LeetCode Folder: [`141-linked-list-cycle`](../141-linked-list-cycle)
+
+- **Pattern:** Linked List
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if (head == null || head.next==null) return false;
+
+        ListNode slow=head;
+        ListNode fast=head;
+
+        while(fast!=null&& fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+
+            if(slow== fast) return true;
+        }
+        return false;
+
+        
+    }
+}
+```
+
 ### 206. Reverse Linked List (Easy)
 
 🔗 LeetCode Folder: [`206-reverse-linked-list`](../206-reverse-linked-list)
