@@ -6,49 +6,9 @@ Placement-focused revision notes for LinkedList.
 
 <!-- AUTO-GENERATED START -->
 
-### 141. Linked List Cycle (Easy)
+### 92. Reverse Linked List Ii (Medium)
 
-🔗 LeetCode Folder: [`141-linked-list-cycle`](../141-linked-list-cycle)
-
-- **Pattern:** Linked List
-- **Time Complexity:** TBD
-- **Space Complexity:** TBD
-
-```java
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
-    public boolean hasCycle(ListNode head) {
-        if (head == null || head.next==null) return false;
-
-        ListNode slow=head;
-        ListNode fast=head;
-
-        while(fast!=null&& fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
-
-            if(slow== fast) return true;
-        }
-        return false;
-
-        
-    }
-}
-```
-
-### 206. Reverse Linked List (Easy)
-
-🔗 LeetCode Folder: [`206-reverse-linked-list`](../206-reverse-linked-list)
+🔗 LeetCode Folder: [`92-reverse-linked-list-ii`](../92-reverse-linked-list-ii)
 
 - **Pattern:** Linked List
 - **Time Complexity:** TBD
@@ -66,81 +26,34 @@ public class Solution {
  * }
  */
 class Solution {
-    public ListNode reverseList(ListNode head) {
-        //dummy.next=head;
-        ListNode prev=null;
-        ListNode curr=head;
+    public ListNode reverseBetween(ListNode head, int left, int right) {
 
-        while(curr !=null){
-            ListNode nextTemp=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=nextTemp;
+        //check if listnode is empty
+        if(head==null|| left==right) return head;
+
+        ListNode dummy=new ListNode();
+        dummy.next=head;
+
+        ListNode prev=dummy;
+
+        //move prev till left
+        for(int i= 1;i<left; i++){
+            prev=prev.next;
         }
-        return prev;
+
+        //move current next to prev
+        ListNode curr=prev.next;
+
+        //itetrate right-left times and reverse
+        for (int i=0; i<right-left;i++){
+            ListNode nextTemp=curr.next;
+
+            curr.next=nextTemp.next;
+            nextTemp.next=prev.next;
+            prev.next=nextTemp;
+        }
+        return dummy.next;
         
-    }
-}
-```
-
-### 234. Palindrome Linked List (Easy)
-
-🔗 LeetCode Folder: [`234-palindrome-linked-list`](../234-palindrome-linked-list)
-
-- **Pattern:** Linked List
-- **Time Complexity:** TBD
-- **Space Complexity:** TBD
-
-```java
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-class Solution {
-    public boolean isPalindrome(ListNode head) {
-        if(head==null || head.next==null) return true;
-
-        ListNode slow=head;
-        ListNode fast=head;
-
-        //find middle
-
-        while(fast!=null&& fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
-        }
-
-        //reverse 
-
-        ListNode curr=slow;
-        ListNode prev=null;
-
-        while(curr!=null){
-            ListNode nextTemp=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=nextTemp;
-        }
-
-        //compare
-
-        ListNode first=head;
-        ListNode second=prev;
-
-        while(second!=null){
-            if(first.val != second.val)
-            return false;
-
-            first=first.next;
-            second=second.next;
-        }
-        return true;
     }
 }
 ```
