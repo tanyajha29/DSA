@@ -6,9 +6,9 @@ Placement-focused revision notes for Trees.
 
 <!-- AUTO-GENERATED START -->
 
-### 199. Binary Tree Right Side View (Medium)
+### 102. Binary Tree Level Order Traversal (Medium)
 
-🔗 LeetCode Folder: [`199-binary-tree-right-side-view`](../199-binary-tree-right-side-view)
+🔗 LeetCode Folder: [`102-binary-tree-level-order-traversal`](../102-binary-tree-level-order-traversal)
 
 - **Pattern:** Tree
 - **Time Complexity:** TBD
@@ -31,22 +31,40 @@ Placement-focused revision notes for Trees.
  * }
  */
 class Solution {
-    public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> result=new ArrayList<>();
+    public List<List<Integer>> levelOrder(TreeNode root) {
 
-        dfs_right_searcha(root, 0, result);
-        return result;
-        
-    }
+        List<List<Integer>> result=new ArrayList<>();
 
-   public void dfs_right_searcha(TreeNode node, int level, List<Integer>result){
-        if(node==null) return;
-
-        if(level==result.size()){
-            result.add(node.val);
+        //check if root is null
+        if(root ==null){
+            return result;
         }
-            dfs_right_searcha(node.right, level+1, result);
-            dfs_right_searcha(node.left, level+1, result);
+        Queue<TreeNode> queue=new LinkedList<>();
+        //add root to queue
+        queue.offer(root);
+
+        while(!queue.isEmpty()){
+            //get current level size
+            int levelSize=queue.size();
+            List<Integer> level=new ArrayList<>();
+
+            //traverse that many nodes
+            for(int i=0;i<levelSize;i++){
+                TreeNode Curr = queue.poll();
+                level.add(Curr.val);
+
+                //add child node to queue
+                if(Curr.left!=null){
+                    queue.offer(Curr.left);
+                }
+                if(Curr.right!=null){
+                    queue.offer(Curr.right);
+                }
+
+            }
+            result.add(level);
+        }
+        return result;
         
     }
 }
