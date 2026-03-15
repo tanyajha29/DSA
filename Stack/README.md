@@ -6,64 +6,55 @@ Placement-focused revision notes for Stack.
 
 <!-- AUTO-GENERATED START -->
 
-### 20. Valid Parentheses (Easy)
+### 155. Min Stack (Medium)
 
-🔗 LeetCode Folder: [`20-valid-parentheses`](../20-valid-parentheses)
+🔗 LeetCode Folder: [`155-min-stack`](../155-min-stack)
 
 - **Pattern:** Stack
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(n)
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
 
 ```java
-class Solution {
-    public boolean isValid(String s) {
-        Stack<Character> stack=new Stack<>();
-        for (char ch:s.toCharArray()){
-            if(ch=='('||ch=='['||ch=='{'){
-                stack.push(ch);
-            }
-            else{
-                if(stack.isEmpty())return false;
-                char top=stack.pop();
-                if(ch==')'&& top!='(') return false;
-                 if(ch==']'&& top!='[') return false;
-                  if(ch=='}'&& top!='{') return false;
+class MinStack {
+    Stack<Integer> stack;
+    Stack<Integer> minStack;
 
-            }
+    public MinStack() {
+        stack = new Stack<>();
+        minStack = new Stack<>();
+    }
+    
+    public void push(int val) {
+        stack.push(val);
+        if(minStack.isEmpty() || val <= minStack.peek()){
+            minStack.push(val);
         }
-        return stack.isEmpty();
-        
+    }
+    
+    public void pop() {
+        int removed = stack.pop();
+        if( removed == minStack.peek() ){
+            minStack.pop();
+        }
+    }
+    
+    public int top() {
+        return stack.peek();
+    }
+    
+    public int getMin() {
+        return minStack.peek();
     }
 }
-```
 
-### 84. Largest Rectangle In Histogram (Hard)
-
-🔗 LeetCode Folder: [`84-largest-rectangle-in-histogram`](../84-largest-rectangle-in-histogram)
-
-- **Pattern:** Monotonic Stack
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(n)
-
-```java
-class Solution {
-    public int largestRectangleArea(int[] heights) {
-         Stack<Integer> stack = new Stack<>();
-        int maxArea=0;
-        int n=heights.length;
-        for(int i=0;i<=n;i++){
-            int currHeight=(i==n)?0:heights[i];
-            while (!stack.isEmpty()&& currHeight<heights[stack.peek()]){
-                int height=heights[stack.pop()];
-                int width=stack.isEmpty()?i:i-stack.peek()-1;
-                maxArea=Math.max(maxArea, height*width);
-
-            }
-            stack.push(i);
-        }
-        return maxArea;
-    }
-}
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(val);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */
 ```
 
 <!-- AUTO-GENERATED END -->
