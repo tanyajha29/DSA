@@ -84,4 +84,33 @@ class Solution {
 }
 ```
 
+### 1552. Build An Array With Stack Operations (Medium)
+
+🔗 LeetCode Folder: [`1552-build-an-array-with-stack-operations`](../1552-build-an-array-with-stack-operations)
+
+- **Pattern:** Stack
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public List<String> buildArray(int[] target, int n) {
+        List<String> res= new ArrayList<>();
+        int j=0;
+
+        for (int i=1; i<=n && j < target.length; i++){
+            if ( i == target[j]){
+                res.add("Push");
+                j++;
+            }
+            else{
+                res.add("Push");
+                res.add("Pop");
+            }
+        }
+        return res;
+    }
+}
+```
+
 <!-- AUTO-GENERATED END -->
