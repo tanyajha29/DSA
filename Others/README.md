@@ -36,4 +36,29 @@ class Solution {
 }
 ```
 
+### 58. Length Of Last Word (Easy)
+
+🔗 LeetCode Folder: [`58-length-of-last-word`](../58-length-of-last-word)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int len = 0;
+        int i = s.length() - 1;
+        while ( i >= 0 && s.charAt(i) == ' '){
+            i--;
+        }
+         while ( i >= 0 && s.charAt(i) != ' '){
+            len++;
+            i--;
+        }
+        return len;
+    }
+}
+```
+
 <!-- AUTO-GENERATED END -->
