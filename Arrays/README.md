@@ -6,9 +6,9 @@ Placement-focused revision notes for Arrays.
 
 <!-- AUTO-GENERATED START -->
 
-### 88. Merge Sorted Array (Easy)
+### 26. Remove Duplicates From Sorted Array (Easy)
 
-🔗 LeetCode Folder: [`88-merge-sorted-array`](../88-merge-sorted-array)
+🔗 LeetCode Folder: [`26-remove-duplicates-from-sorted-array`](../26-remove-duplicates-from-sorted-array)
 
 - **Pattern:** Arrays
 - **Time Complexity:** TBD
@@ -16,28 +16,80 @@ Placement-focused revision notes for Arrays.
 
 ```java
 class Solution {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int i = m - 1; //valid last element of num1
-        int j = n - 1; //last element of nums2
-        int k = m + n -1; //last element of num1
-
-        //itetrate till one array has no element to itetrate
-        while (i >= 0 && j >= 0){
-            if (nums1[i] > nums2[j]){
-                nums1[k] = nums1[i];
-                i--;
-            }else{
-                nums1[k] = nums2[j];
-                j--;
-            }
-            k--;
-        } 
-        //if nums2 still hast elements left
-        while(j >= 0){
-            nums1[k] = nums2[j];
-            j--;
-            k--;
+    public int removeDuplicates(int[] nums) {
+        //chect if null
+        if( nums.length==0){
+            return 0;
         }
+
+        int i=0;
+        for(int j=1;j<nums.length;j++){
+            if(nums[j]!=nums[i]){
+                i++;
+                nums[i]=nums[j];
+            }
+        }
+        return i+1;
+    }
+}
+```
+
+### 121. Best Time To Buy And Sell Stock (Easy)
+
+🔗 LeetCode Folder: [`121-best-time-to-buy-and-sell-stock`](../121-best-time-to-buy-and-sell-stock)
+
+- **Pattern:** Greedy / One Pass
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(1)
+
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit=0;
+        for ( int i=0;i<prices.length; i++){
+            if(prices[i]<minPrice){
+                minPrice=prices[i];
+            }else{
+                int profit= prices[i]-minPrice;
+                maxProfit=Math.max(maxProfit, profit);
+            }
+        }
+            return maxProfit;
+        }
+        
+    
+}
+```
+
+### 238. Product Of Array Except Self (Medium)
+
+🔗 LeetCode Folder: [`238-product-of-array-except-self`](../238-product-of-array-except-self)
+
+- **Pattern:** Prefix / Suffix
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(1)
+
+```java
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] answer = new int[n];
+
+        // Step 1: prefix product
+        answer[0] = 1;
+        for (int i = 1; i < n; i++) {
+            answer[i] = answer[i - 1] * nums[i - 1];
+        }
+
+        // Step 2: multiply with suffix product
+        int suffix = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            answer[i] *= suffix;
+            suffix *= nums[i];
+        }
+
+        return answer;
     }
 }
 ```
