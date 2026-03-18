@@ -284,6 +284,13 @@ def main() -> None:
 
         problems_by_topic.setdefault(topic, {})[number] = entry
 
+    # If no LeetSync folders are present (e.g., on CI checkout), avoid
+    # writing empty README files that wipe existing content.
+    total_problems = sum(len(v) for v in problems_by_topic.values())
+    if total_problems == 0:
+        print("No LeetSync problem folders found; skipping README updates.")
+        return
+
     # Always ensure fallback topic exists.
     problems_by_topic.setdefault(DEFAULT_TOPIC, {})
 
