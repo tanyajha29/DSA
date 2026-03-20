@@ -6,64 +6,61 @@ Placement-focused revision notes for Stack.
 
 <!-- AUTO-GENERATED START -->
 
-### 20. Valid Parentheses (Easy)
+### 225. Implement Stack Using Queues (Easy)
 
-🔗 LeetCode Folder: [`20-valid-parentheses`](../20-valid-parentheses)
+🔗 LeetCode Folder: [`225-implement-stack-using-queues`](../225-implement-stack-using-queues)
 
 - **Pattern:** Stack
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(n)
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
 
 ```java
-class Solution {
-    public boolean isValid(String s) {
-        Stack<Character> stack=new Stack<>();
-        for (char ch:s.toCharArray()){
-            if(ch=='('||ch=='['||ch=='{'){
-                stack.push(ch);
-            }
-            else{
-                if(stack.isEmpty())return false;
-                char top=stack.pop();
-                if(ch==')'&& top!='(') return false;
-                 if(ch==']'&& top!='[') return false;
-                  if(ch=='}'&& top!='{') return false;
+class MyStack {
+    //use 2 queue
 
-            }
-        }
-        return stack.isEmpty();
+    Queue<Integer> q1; //main
+    Queue<Integer> q2; //helper
+    public MyStack() {
+        q1 = new LinkedList<>();
+        q2 = new LinkedList<>();
+    }
+    
+    public void push(int x) {
+        //add element to q2
+        q2.add(x);
         
-    }
-}
-```
-
-### 84. Largest Rectangle In Histogram (Hard)
-
-🔗 LeetCode Folder: [`84-largest-rectangle-in-histogram`](../84-largest-rectangle-in-histogram)
-
-- **Pattern:** Monotonic Stack
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(n)
-
-```java
-class Solution {
-    public int largestRectangleArea(int[] heights) {
-         Stack<Integer> stack = new Stack<>();
-        int maxArea=0;
-        int n=heights.length;
-        for(int i=0;i<=n;i++){
-            int currHeight=(i==n)?0:heights[i];
-            while (!stack.isEmpty()&& currHeight<heights[stack.peek()]){
-                int height=heights[stack.pop()];
-                int width=stack.isEmpty()?i:i-stack.peek()-1;
-                maxArea=Math.max(maxArea, height*width);
-
-            }
-            stack.push(i);
+        //move all elements from q1 to q2
+        while(!q1.isEmpty()){
+            q2.add(q1.remove());
         }
-        return maxArea;
+
+        //swap q1 and q2
+        Queue<Integer> temp = q1;
+        q1 = q2;
+        q2 = temp;
+    }
+    
+    public int pop() {
+       return q1.remove();
+    }
+    
+    public int top() {
+        return q1.peek();
+    }
+    
+    public boolean empty() {
+        return q1.isEmpty();
     }
 }
+
+/**
+ * Your MyStack object will be instantiated and called as such:
+ * MyStack obj = new MyStack();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.top();
+ * boolean param_4 = obj.empty();
+ */
 ```
 
 <!-- AUTO-GENERATED END -->
