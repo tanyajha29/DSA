@@ -87,4 +87,33 @@ class Solution {
 }
 ```
 
+### 387. First Unique Character In A String (Easy)
+
+🔗 LeetCode Folder: [`387-first-unique-character-in-a-string`](../387-first-unique-character-in-a-string)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int firstUniqChar(String s) {
+        int[] freq = new int[26];
+
+        //count frequency
+        for(int i = 0; i < s.length(); i++){
+            freq[s.charAt(i) - 'a']++;
+        }
+
+        //find first unique character
+         for(int i = 0; i < s.length(); i++){
+           if(freq[s.charAt(i) - 'a'] == 1){
+            return i;
+           }
+         }
+         return -1;
+    }
+}
+```
+
 <!-- AUTO-GENERATED END -->
