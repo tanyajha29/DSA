@@ -125,6 +125,39 @@ class Solution {
 }
 ```
 
+### 139. Word Break (Medium)
+
+🔗 LeetCode Folder: [`139-word-break`](../139-word-break)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+        //convert dictionary to hashset
+        Set<String> resSet = new HashSet(wordDict);
+        //create dp array
+        boolean[] dp = new boolean[s.length() + 1];
+
+        //initialize base array
+        dp[0] = true;
+
+        //fill dp array
+        for(int i = 1; i <= s.length(); i++){
+            for ( int j = 0; j < i; j++){
+                if (dp[j] && resSet.contains(s.substring(j,i))){
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+}
+```
+
 ### 387. First Unique Character In A String (Easy)
 
 🔗 LeetCode Folder: [`387-first-unique-character-in-a-string`](../387-first-unique-character-in-a-string)
