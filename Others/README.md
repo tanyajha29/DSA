@@ -177,6 +177,24 @@ class Solution(object):
         return False
 ```
 
+### 283. Move Zeroes (Easy)
+
+🔗 LeetCode Folder: [`283-move-zeroes`](../283-move-zeroes)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def moveZeroes(self, nums):
+        j = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[i], nums[j] = nums[j], nums[i]
+                j+=1
+```
+
 ### 387. First Unique Character In A String (Easy)
 
 🔗 LeetCode Folder: [`387-first-unique-character-in-a-string`](../387-first-unique-character-in-a-string)
