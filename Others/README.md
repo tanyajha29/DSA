@@ -158,6 +158,25 @@ class Solution {
 }
 ```
 
+### 217. Contains Duplicate (Easy)
+
+🔗 LeetCode Folder: [`217-contains-duplicate`](../217-contains-duplicate)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def containsDuplicate(self, nums):
+        seen = set()
+        for i in nums:
+            if i in seen:
+                return True
+            seen.add(i)
+        return False
+```
+
 ### 387. First Unique Character In A String (Easy)
 
 🔗 LeetCode Folder: [`387-first-unique-character-in-a-string`](../387-first-unique-character-in-a-string)
