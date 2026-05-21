@@ -6,6 +6,16 @@ Placement-focused revision notes for Arrays.
 
 <!-- AUTO-GENERATED START -->
 
+### 26. Remove Duplicates From Sorted Array (Easy)
+
+🔗 LeetCode Folder: [`26-remove-duplicates-from-sorted-array`](../26-remove-duplicates-from-sorted-array)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+_No solution file found in the LeetSync folder._
+
 ### 121. Best Time To Buy And Sell Stock (Easy)
 
 🔗 LeetCode Folder: [`121-best-time-to-buy-and-sell-stock`](../121-best-time-to-buy-and-sell-stock)
