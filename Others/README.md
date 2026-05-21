@@ -195,6 +195,25 @@ class Solution(object):
                 j+=1
 ```
 
+### 344. Reverse String (Easy)
+
+🔗 LeetCode Folder: [`344-reverse-string`](../344-reverse-string)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def reverseString(self, s):
+        left = 0
+        right = len(s) - 1
+        while left < right:
+            s[left], s[right] = s[right], s[left]
+            left += 1
+            right -= 1
+```
+
 ### 387. First Unique Character In A String (Easy)
 
 🔗 LeetCode Folder: [`387-first-unique-character-in-a-string`](../387-first-unique-character-in-a-string)
