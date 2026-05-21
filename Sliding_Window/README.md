@@ -6,38 +6,24 @@ Placement-focused revision notes for Sliding_Window.
 
 <!-- AUTO-GENERATED START -->
 
-### 3. Longest Substring Without Repeating Characters (Medium)
+### 53. Maximum Subarray (Medium)
 
-🔗 LeetCode Folder: [`3-longest-substring-without-repeating-characters`](../3-longest-substring-without-repeating-characters)
+🔗 LeetCode Folder: [`53-maximum-subarray`](../53-maximum-subarray)
 
 - **Pattern:** Sliding Window
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(1)
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
 
-```java
-class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        int[] lastIndex = new int[256];
-        for(int i=0; i<256; i++) lastIndex[i] = -1;
+```python
+class Solution(object):
+    def maxSubArray(self, nums):
+        curr_sum = nums[0]
+        max_sum = nums[0]
 
-        int maxLen = 0, start = 0;
-        for(int end = 0; end < s.length(); end++) {
-            char c = s.charAt(end);
-            if(lastIndex[c] >= start) start = lastIndex[c]+1;
-            lastIndex[c] = end;
-            maxLen = Math.max(maxLen, end - start + 1);
-        }
-        return maxLen;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        String s = "abcabcbb";
-        int ret = new Solution().lengthOfLongestSubstring(s);
-        System.out.println(ret); // Output: 3
-    }
-}
+        for i in range (1, len(nums)):
+            curr_sum = max(nums[i], curr_sum + nums[i])
+            max_sum = max(curr_sum,  max_sum)
+        return max_sum
 ```
 
 <!-- AUTO-GENERATED END -->
