@@ -6,6 +6,26 @@ Placement-focused revision notes for Others.
 
 <!-- AUTO-GENERATED START -->
 
+### 28. Find The Index Of The First Occurrence In A String (Easy)
+
+🔗 LeetCode Folder: [`28-find-the-index-of-the-first-occurrence-in-a-string`](../28-find-the-index-of-the-first-occurrence-in-a-string)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def strStr(self, haystack, needle):
+        n = len(needle)
+
+        for i in range (len(haystack) - n + 1):
+            # check substring
+            if haystack[ i : i + n] == needle:
+                return i
+        return -1
+```
+
 ### 112. Path Sum (Easy)
 
 🔗 LeetCode Folder: [`112-path-sum`](../112-path-sum)
