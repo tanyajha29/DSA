@@ -178,6 +178,37 @@ class Solution {
 }
 ```
 
+### 202. Happy Number (Easy)
+
+🔗 LeetCode Folder: [`202-happy-number`](../202-happy-number)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def isHappy(self, n):
+
+        seen = set()
+
+        # loop until n becomes 1 or an endless loop is created
+        while n != 1 and n not in seen:
+
+            seen.add(n)
+            total = 0
+
+            # digit sqauare and addition
+            while n > 0:
+                digit = n % 10
+                total += digit * digit
+                n //= 10
+
+            n = total
+
+        return n == 1
+```
+
 ### 217. Contains Duplicate (Easy)
 
 🔗 LeetCode Folder: [`217-contains-duplicate`](../217-contains-duplicate)
