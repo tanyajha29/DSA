@@ -321,4 +321,32 @@ class Solution {
 }
 ```
 
+### 792. Binary Search (Easy)
+
+🔗 LeetCode Folder: [`792-binary-search`](../792-binary-search)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def search(self, nums, target):
+        left = 0
+        right = len(nums) - 1
+        
+        while right >= left :
+            mid = (left + right)//2
+
+            if nums[mid] == target:
+                return mid
+            
+            elif nums[mid] < target:
+                left = mid + 1
+            
+            else:
+                right = mid - 1
+        return -1
+```
+
 <!-- AUTO-GENERATED END -->
