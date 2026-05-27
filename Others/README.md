@@ -26,6 +26,16 @@ class Solution(object):
         return -1
 ```
 
+### 35. Search Insert Position (Easy)
+
+🔗 LeetCode Folder: [`35-search-insert-position`](../35-search-insert-position)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+_No solution file found in the LeetSync folder._
+
 ### 112. Path Sum (Easy)
 
 🔗 LeetCode Folder: [`112-path-sum`](../112-path-sum)
