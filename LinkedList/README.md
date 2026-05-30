@@ -6,6 +6,35 @@ Placement-focused revision notes for LinkedList.
 
 <!-- AUTO-GENERATED START -->
 
+### 203. Remove Linked List Elements (Easy)
+
+🔗 LeetCode Folder: [`203-remove-linked-list-elements`](../203-remove-linked-list-elements)
+
+- **Pattern:** Linked List
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def removeElements(self, head, val):
+       dummy = ListNode(0)
+       dummy.next = head
+       curr = dummy
+
+       while curr and curr.next :
+        # remove the node
+        if curr.next.val == val :
+            curr.next = curr.next.next
+        else :
+            curr = curr.next
+       return dummy.next
+```
+
 ### 908. Middle Of The Linked List (Easy)
 
 🔗 LeetCode Folder: [`908-middle-of-the-linked-list`](../908-middle-of-the-linked-list)
