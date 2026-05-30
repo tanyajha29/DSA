@@ -35,6 +35,43 @@ class Solution(object):
        return dummy.next
 ```
 
+### 328. Odd Even Linked List (Medium)
+
+🔗 LeetCode Folder: [`328-odd-even-linked-list`](../328-odd-even-linked-list)
+
+- **Pattern:** Linked List
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution:
+    def oddEvenList(self, head):
+
+        if not head or not head.next:
+            return head
+
+        odd = head
+        even = head.next
+
+        # save even list start
+        even_head = even
+
+        while even and even.next:
+
+            # connect odd nodes
+            odd.next = even.next
+            odd = odd.next
+
+            # connect even nodes
+            even.next = odd.next
+            even = even.next
+
+        # attach even list after odd list
+        odd.next = even_head
+
+        return head
+```
+
 ### 908. Middle Of The Linked List (Easy)
 
 🔗 LeetCode Folder: [`908-middle-of-the-linked-list`](../908-middle-of-the-linked-list)
