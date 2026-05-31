@@ -14,33 +14,28 @@ Placement-focused revision notes for Trees.
 - **Time Complexity:** TBD
 - **Space Complexity:** TBD
 
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution {
-    public int maxDepth(TreeNode root) {
-        if(root == null){
-            return 0;
-        }
-        int leftDepth = maxDepth(root.left);
-        int rightDepth = maxDepth(root.right);
-
-        return Math.max(leftDepth, rightDepth) + 1;
-    }
-}
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: int
+        """
+        #base case
+        if not root :
+            return 0
+        
+        # check left and right subtree recursively
+        rightDepth = self.maxDepth(root.right)
+        leftDepth = self.maxDepth(root.left)
+        
+        return ( max(rightDepth, leftDepth) + 1 )
 ```
 
 <!-- AUTO-GENERATED END -->
