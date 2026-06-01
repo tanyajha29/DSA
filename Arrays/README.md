@@ -6,87 +6,46 @@ Placement-focused revision notes for Arrays.
 
 <!-- AUTO-GENERATED START -->
 
-### 26. Remove Duplicates From Sorted Array (Easy)
+### 189. Rotate Array (Medium)
 
-🔗 LeetCode Folder: [`26-remove-duplicates-from-sorted-array`](../26-remove-duplicates-from-sorted-array)
-
-- **Pattern:** Arrays
-- **Time Complexity:** TBD
-- **Space Complexity:** TBD
-
-_No solution file found in the LeetSync folder._
-
-### 33. Search In Rotated Sorted Array (Medium)
-
-🔗 LeetCode Folder: [`33-search-in-rotated-sorted-array`](../33-search-in-rotated-sorted-array)
+🔗 LeetCode Folder: [`189-rotate-array`](../189-rotate-array)
 
 - **Pattern:** Arrays
 - **Time Complexity:** TBD
 - **Space Complexity:** TBD
 
 ```python
-class Solution:
-    def search(self, nums, target):
+'''Whole reverse:
 
-        left = 0
-        right = len(nums) - 1
+puts desired elements in front
+but reversed order
 
-        while left <= right:
+Then:
 
-            mid = (left + right) // 2
+reverse front part
+reverse back part
 
-            # target found
-            if nums[mid] == target:
-                return mid
-
-            # LEFT HALF SORTED
-            if nums[left] <= nums[mid]:
-
-                # target inside left half
-                if nums[left] <= target < nums[mid]:
-                    right = mid - 1
-                else:
-                    left = mid + 1
-
-            # RIGHT HALF SORTED
-            else:
-
-                # target inside right half
-                if nums[mid] < target <= nums[right]:
-                    left = mid + 1
-                else:
-                    right = mid - 1
-
-        return -1
-```
-
-### 121. Best Time To Buy And Sell Stock (Easy)
-
-🔗 LeetCode Folder: [`121-best-time-to-buy-and-sell-stock`](../121-best-time-to-buy-and-sell-stock)
-
-- **Pattern:** Greedy / One Pass
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(1)
-
-```python
+to restore order.'''
 class Solution(object):
-    def maxProfit(self, prices):
-        #declare and initialize variables
-        min_pr=float('inf')
-        max_pr=0
+    def rotate(self, nums, k):
+        n = len(nums)
+        # rotating k times is same as k%n
+        k = k % n
 
-        #loop through all values/price
-        for price in prices:
-            # check and initalize min price
-            if price < min_pr:
-                min_pr = price
-            #check profit and buy time
-            profit = price - min_pr
-
-            # check and initalize max price
-            if profit > max_pr:
-                max_pr = profit
-        return max_pr
+        # a helper function
+        def helper(left, right) :
+            while left < right :
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+                right -= 1
+        
+        #start rotating
+        # 1. rotate whole array
+        helper(0, n-1)
+        # 2. rotate first k elements
+        helper(0, k-1)
+        # 3 rotate remaining elements
+        helper(k, n-1)
 ```
 
 <!-- AUTO-GENERATED END -->
