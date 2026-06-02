@@ -50,4 +50,32 @@ class Solution(object):
         return "".join(result[::-1])
 ```
 
+### 70. Climbing Stairs (Easy)
+
+🔗 LeetCode Folder: [`70-climbing-stairs`](../70-climbing-stairs)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def climbStairs(self, n):
+        if n == 1 :
+            return 1
+        
+        if n == 2 :
+            return 2
+        
+        first = 1
+        second = 2
+
+        for i in range (3, n + 1) :
+            current = first + second
+            first = second
+            second = current
+        
+        return second
+```
+
 <!-- AUTO-GENERATED END -->
