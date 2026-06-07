@@ -6,6 +6,26 @@ Placement-focused revision notes for Others.
 
 <!-- AUTO-GENERATED START -->
 
+### 62. Unique Paths (Medium)
+
+🔗 LeetCode Folder: [`62-unique-paths`](../62-unique-paths)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def uniquePaths(self, m, n):
+        dp = [[1] * n for _ in range(m)]
+
+        for i in range (1, m) :
+            for j in range(1, n) :
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+            
+        return dp[m-1][n-1]
+```
+
 ### 67. Add Binary (Easy)
 
 🔗 LeetCode Folder: [`67-add-binary`](../67-add-binary)
