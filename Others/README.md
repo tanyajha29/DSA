@@ -26,6 +26,41 @@ class Solution(object):
         return dp[m-1][n-1]
 ```
 
+### 63. Unique Paths Ii (Medium)
+
+🔗 LeetCode Folder: [`63-unique-paths-ii`](../63-unique-paths-ii)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def uniquePathsWithObstacles(self, obstacleGrid):
+        m = len(obstacleGrid)
+        n = len(obstacleGrid[0])
+
+        if obstacleGrid[0][0] == 1 :
+            return 0
+
+        dp = [[0] * n for _ in range(m)]
+
+        dp[0][0] = 1
+
+        for i in range(m) :
+            for j in range(n) :
+                if obstacleGrid[i][j] == 1 :
+                    dp[i][j] = 0
+                else :
+                    # from top
+                    if i > 0 :
+                          dp[i][j] += dp[i -1][j]
+                    if j > 0 :
+                        dp[i][j] += dp[i][j - 1]
+        
+        return dp[m-1][n-1]
+```
+
 ### 67. Add Binary (Easy)
 
 🔗 LeetCode Folder: [`67-add-binary`](../67-add-binary)
