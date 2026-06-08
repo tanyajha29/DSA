@@ -6,6 +6,16 @@ Placement-focused revision notes for Others.
 
 <!-- AUTO-GENERATED START -->
 
+### 45. Jump Game Ii (Medium)
+
+🔗 LeetCode Folder: [`45-jump-game-ii`](../45-jump-game-ii)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+_No solution file found in the LeetSync folder._
+
 ### 62. Unique Paths (Medium)
 
 🔗 LeetCode Folder: [`62-unique-paths`](../62-unique-paths)
