@@ -205,6 +205,25 @@ class Solution(object):
         return candidate
 ```
 
+### 268. Missing Number (Easy)
+
+🔗 LeetCode Folder: [`268-missing-number`](../268-missing-number)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def missingNumber(self, nums):
+        n = len(nums)
+
+        exp_sum = (n*(n + 1))//2
+        actual_sum = sum(nums)
+
+        return exp_sum - actual_sum
+```
+
 ### 1626. Can Make Arithmetic Progression From Sequence (Easy)
 
 🔗 LeetCode Folder: [`1626-can-make-arithmetic-progression-from-sequence`](../1626-can-make-arithmetic-progression-from-sequence)
