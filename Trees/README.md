@@ -6,6 +6,16 @@ Placement-focused revision notes for Trees.
 
 <!-- AUTO-GENERATED START -->
 
+### 96. Unique Binary Search Trees (Medium)
+
+🔗 LeetCode Folder: [`96-unique-binary-search-trees`](../96-unique-binary-search-trees)
+
+- **Pattern:** Tree
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+_No solution file found in the LeetSync folder._
+
 ### 100. Same Tree (Easy)
 
 🔗 LeetCode Folder: [`100-same-tree`](../100-same-tree)
