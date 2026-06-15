@@ -48,6 +48,21 @@ class Solution(object):
         helper(k, n-1)
 ```
 
+### 215. Kth Largest Element In An Array (Medium)
+
+🔗 LeetCode Folder: [`215-kth-largest-element-in-an-array`](../215-kth-largest-element-in-an-array)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        nums.sort(reverse = True)
+        return nums[k-1]
+```
+
 ### 525. Contiguous Array (Medium)
 
 🔗 LeetCode Folder: [`525-contiguous-array`](../525-contiguous-array)
