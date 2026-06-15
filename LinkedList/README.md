@@ -71,6 +71,27 @@ class Solution(object):
        return dummy.next
 ```
 
+### 237. Delete Node In A Linked List (Medium)
+
+🔗 LeetCode Folder: [`237-delete-node-in-a-linked-list`](../237-delete-node-in-a-linked-list)
+
+- **Pattern:** Linked List
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def deleteNode(self, node):
+        node.val = node.next.val
+        node.next = node.next.next
+```
+
 ### 328. Odd Even Linked List (Medium)
 
 🔗 LeetCode Folder: [`328-odd-even-linked-list`](../328-odd-even-linked-list)
