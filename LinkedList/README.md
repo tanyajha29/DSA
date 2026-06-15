@@ -108,6 +108,37 @@ class Solution:
         return head
 ```
 
+### 382. Linked List Random Node (Medium)
+
+🔗 LeetCode Folder: [`382-linked-list-random-node`](../382-linked-list-random-node)
+
+- **Pattern:** Linked List
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+import random
+
+class Solution(object):
+
+    def __init__(self, head):
+
+        self.values = []
+
+        curr = head
+
+        # store all node values
+        while curr:
+
+            self.values.append(curr.val)
+
+            curr = curr.next
+
+    def getRandom(self):
+
+        return random.choice(self.values)
+```
+
 ### 528. Swapping Nodes In A Linked List (Medium)
 
 🔗 LeetCode Folder: [`528-swapping-nodes-in-a-linked-list`](../528-swapping-nodes-in-a-linked-list)
