@@ -338,6 +338,28 @@ class Solution(object):
         return exp_sum - actual_sum
 ```
 
+### 485. Max Consecutive Ones (Easy)
+
+🔗 LeetCode Folder: [`485-max-consecutive-ones`](../485-max-consecutive-ones)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def findMaxConsecutiveOnes(self, nums):
+        max_count = 0
+        count = 0
+        for i in range(len(nums)) :
+            if nums[i] == 1 :
+                count += 1
+                max_count = max(max_count, count)
+            else :
+                count = 0
+        return max_count
+```
+
 ### 1626. Can Make Arithmetic Progression From Sequence (Easy)
 
 🔗 LeetCode Folder: [`1626-can-make-arithmetic-progression-from-sequence`](../1626-can-make-arithmetic-progression-from-sequence)
