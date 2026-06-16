@@ -292,6 +292,34 @@ class Solution(object):
         return second
 ```
 
+### 75. Sort Colors (Medium)
+
+🔗 LeetCode Folder: [`75-sort-colors`](../75-sort-colors)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def sortColors(self, nums):
+        low = 0
+        mid = 0
+        n = len(nums)
+        high = n - 1
+
+        for i in range(n) :
+            if nums[mid] == 0 :
+                nums[low], nums[mid] = nums[mid], nums[low]
+                mid += 1
+                low += 1
+            elif nums[mid] == 1 :
+                mid += 1
+            elif nums[mid] == 2 :
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
+```
+
 ### 169. Majority Element (Easy)
 
 🔗 LeetCode Folder: [`169-majority-element`](../169-majority-element)
