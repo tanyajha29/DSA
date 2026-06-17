@@ -193,4 +193,30 @@ class Solution(object):
         return i == n - 1
 ```
 
+### 2271. Rearrange Array Elements By Sign (Medium)
+
+🔗 LeetCode Folder: [`2271-rearrange-array-elements-by-sign`](../2271-rearrange-array-elements-by-sign)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def rearrangeArray(self, nums):
+        negIndex = 1
+        posIndex = 0
+        n = len(nums)
+        result = [0] * n
+
+        for i in range (n) :
+            if nums[i] < 0 :
+                result[negIndex] = nums[i]
+                negIndex += 2
+            else :
+                result[posIndex] = nums[i]
+                posIndex += 2
+        return result
+```
+
 <!-- AUTO-GENERATED END -->
