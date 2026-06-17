@@ -6,79 +6,39 @@ Placement-focused revision notes for Recursion_Backtracking.
 
 <!-- AUTO-GENERATED START -->
 
-### 416. Partition Equal Subset Sum (Medium)
+### 31. Next Permutation (Medium)
 
-🔗 LeetCode Folder: [`416-partition-equal-subset-sum`](../416-partition-equal-subset-sum)
-
-- **Pattern:** Backtracking
-- **Time Complexity:** TBD
-- **Space Complexity:** TBD
-
-```java
-class Solution {
-    public boolean canPartition(int[] nums) {
-        //find sum of all nums
-        int totalSum = 0;
-        for (int i : nums){
-            totalSum += i;
-        }
-        //check odd/even
-        if (totalSum % 2 != 0){
-            return false;
-        }
-        //find target 
-        int target = totalSum/2;
-        //use dynamic Programming
-        boolean[] dp = new boolean[target + 1];
-        //initialize base value
-        dp[0] = true;
-
-        for (int i : nums){
-            for (int j = target; j >= i; j--){
-                dp[j] = dp[j] || dp[j - i];
-            }
-        }
-        return dp[target];
-    }
-}
-```
-
-### 567. Permutation In String (Medium)
-
-🔗 LeetCode Folder: [`567-permutation-in-string`](../567-permutation-in-string)
+🔗 LeetCode Folder: [`31-next-permutation`](../31-next-permutation)
 
 - **Pattern:** Backtracking
 - **Time Complexity:** TBD
 - **Space Complexity:** TBD
 
 ```python
-from collections import Counter
 class Solution(object):
-    def checkInclusion(self, s1, s2):
-        if len(s1) > len(s2):
-            return False
-        
-        s1_count = Counter(s1)
-        window_len = Counter()
-        # points to start of window
-        left = 0
+    def nextPermutation(self, nums):
+        index = -1
+        n = len(nums)
 
-        for right in range (len(s2)):
-            # add element in the window
-            window_len[s2[right]] += 1
+        # Find pivot
+        for i in range(n - 2, -1, -1):
+            if nums[i] < nums[i + 1]:
+                index = i
+                break
 
-            # check window size 
-            if right - left + 1 > len(s1):
-                window_len[s2[left]] -= 1
+        # If no pivot, reverse whole array
+        if index == -1:
+            nums.reverse()
+            return
 
-                # delete the less frequency element
-                if window_len[s2[left]] == 0:
-                    del window_len[s2[left]]
-                left += 1
+        # Find next larger element
+        for i in range(n - 1, index, -1):
+            if nums[i] > nums[index]:
+                nums[i], nums[index] = nums[index], nums[i]
+                break
 
-            if window_len == s1_count:
-                return True
-        return False
+        # Reverse suffix
+        nums[index + 1:] = reversed(nums[index + 1:])
 ```
 
 <!-- AUTO-GENERATED END -->
