@@ -6,6 +6,27 @@ Placement-focused revision notes for Arrays.
 
 <!-- AUTO-GENERATED START -->
 
+### 48. Rotate Image (Medium)
+
+🔗 LeetCode Folder: [`48-rotate-image`](../48-rotate-image)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def rotate(self, matrix):
+        n = len(matrix)
+
+        for i in range(n) :
+            for j in range(i + 1, n) :
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        
+        for rows in matrix :
+            rows.reverse()
+```
+
 ### 73. Set Matrix Zeroes (Medium)
 
 🔗 LeetCode Folder: [`73-set-matrix-zeroes`](../73-set-matrix-zeroes)
