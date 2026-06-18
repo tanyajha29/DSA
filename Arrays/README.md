@@ -6,6 +6,16 @@ Placement-focused revision notes for Arrays.
 
 <!-- AUTO-GENERATED START -->
 
+### 73. Set Matrix Zeroes (Medium)
+
+🔗 LeetCode Folder: [`73-set-matrix-zeroes`](../73-set-matrix-zeroes)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+_No solution file found in the LeetSync folder._
+
 ### 189. Rotate Array (Medium)
 
 🔗 LeetCode Folder: [`189-rotate-array`](../189-rotate-array)
