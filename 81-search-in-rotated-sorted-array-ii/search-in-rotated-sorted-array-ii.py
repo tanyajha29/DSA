@@ -1,0 +1,33 @@
+class Solution(object):
+    def search(self, nums, target):
+        low = 0
+        high = len(nums) - 1
+
+        while low <= high :
+            mid = (low + high)//2
+
+            if nums[mid] == target :
+                return True
+            
+            # case in which array is not sorted 
+            if nums[low] == nums[mid] and nums[mid] == nums[high]:
+                low += 1 
+                high -= 1
+                continue
+            
+            # left half is sorted
+            if nums[low] <= nums[mid] :
+                if nums[low] <=target <= nums[mid] :
+                    high = mid - 1
+                else :
+                    low = mid + 1
+            # right half is sorted
+            else :
+                if nums[mid] <=target <= nums[high] :
+                    low = mid + 1
+                else :
+                    high = mid - 1
+        return False
+            
+
+        
