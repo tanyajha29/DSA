@@ -208,6 +208,35 @@ class Solution(object):
             k -= 1
 ```
 
+### 153. Find Minimum In Rotated Sorted Array (Medium)
+
+🔗 LeetCode Folder: [`153-find-minimum-in-rotated-sorted-array`](../153-find-minimum-in-rotated-sorted-array)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def findMin(self, nums):
+        low = 0
+        high = len(nums) - 1
+        result = nums[0]
+
+        while low <= high :
+            mid = (low + high) // 2
+            # if left half is sorted
+            if nums[low] <= nums[mid] :
+                result = min(result, nums[low])
+                low = mid + 1
+            # if right half is sorted
+            else:
+                high = mid -  1
+                result = min(result, nums[mid])
+
+        return result
+```
+
 ### 189. Rotate Array (Medium)
 
 🔗 LeetCode Folder: [`189-rotate-array`](../189-rotate-array)
