@@ -413,6 +413,38 @@ class Solution(object):
         return max_len
 ```
 
+### 540. Single Element In A Sorted Array (Medium)
+
+🔗 LeetCode Folder: [`540-single-element-in-a-sorted-array`](../540-single-element-in-a-sorted-array)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def singleNonDuplicate(self, nums):
+        n = len(nums)
+
+        if n == 1:
+            return nums[0]
+        if nums[0] != nums[1] :
+            return nums[0]
+        if nums[n - 1] != nums[n - 2] :
+            return nums[n - 1]
+        low = 1
+        high = n - 2
+        while low <= high :
+            mid = (low + high) // 2
+            if nums[mid] != nums[mid + 1] and nums[mid] != nums[mid - 1] :
+                return nums[mid]
+            if ((mid % 2 == 1 and nums[mid] == nums[mid - 1]) or( mid % 2 == 0 and nums[mid] == nums[mid + 1])) :
+                low = mid + 1
+            else :
+                high = mid - 1
+        return -1
+```
+
 ### 561. Array Partition (Unknown)
 
 🔗 LeetCode Folder: [`561-array-partition`](../561-array-partition)
