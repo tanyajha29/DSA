@@ -85,6 +85,39 @@ class Solution:
         return result
 ```
 
+### 1408. Find The Smallest Divisor Given A Threshold (Medium)
+
+🔗 LeetCode Folder: [`1408-find-the-smallest-divisor-given-a-threshold`](../1408-find-the-smallest-divisor-given-a-threshold)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+import math
+
+class Solution:
+    def find_sum(self, nums, m) :
+        return sum(math.ceil(i/m) for i in nums)
+
+    
+    def smallestDivisor(self, nums: List[int], threshold: int) -> int:
+        if len(nums) > threshold :
+            return -1
+
+        low = 1
+        high = max(nums)
+
+        while low <= high :
+            mid = (low + high)//2
+            if (self.find_sum(nums, mid) <= threshold ) :
+                high = mid - 1
+            else :
+                low = mid + 1
+        
+        return low
+```
+
 ### 1605. Minimum Number Of Days To Make M Bouquets (Medium)
 
 🔗 LeetCode Folder: [`1605-minimum-number-of-days-to-make-m-bouquets`](../1605-minimum-number-of-days-to-make-m-bouquets)
