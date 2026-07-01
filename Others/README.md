@@ -6,6 +6,36 @@ Placement-focused revision notes for Others.
 
 <!-- AUTO-GENERATED START -->
 
+### 125. Valid Palindrome (Easy)
+
+🔗 LeetCode Folder: [`125-valid-palindrome`](../125-valid-palindrome)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def isPalindrome(self, s):
+        left = 0
+        right = len(s) - 1
+        while left < right :
+            # Skip non-alphanumeric characters from the left
+            while left < right and not s[left].isalnum() :
+                left += 1
+            
+            # Skip non-alphanumeric characters from the right
+            while left < right and not s[right].isalnum() :
+                right -= 1
+
+            # compare and move forward
+            if s[left].lower() != s[right].lower() :
+                return False
+            left += 1
+            right -= 1
+        return True
+```
+
 ### 162. Find Peak Element (Medium)
 
 🔗 LeetCode Folder: [`162-find-peak-element`](../162-find-peak-element)
