@@ -76,6 +76,34 @@ class Solution(object):
         return -1
 ```
 
+### 680. Valid Palindrome Ii (Easy)
+
+🔗 LeetCode Folder: [`680-valid-palindrome-ii`](../680-valid-palindrome-ii)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def validPalindrome(self, s):
+        def check_after_skipping(left, right) :
+            while left < right :
+                if s[left] != s[right] :
+                    return False
+                left += 1
+                right -= 1
+            return True 
+
+        left , right = 0, len(s) - 1
+        while left < right :
+            if s[left] != s[right] :
+                return check_after_skipping(left + 1, right) or check_after_skipping(left, right - 1)
+            left += 1
+            right -= 1
+        return True
+```
+
 ### 907. Koko Eating Bananas (Medium)
 
 🔗 LeetCode Folder: [`907-koko-eating-bananas`](../907-koko-eating-bananas)
