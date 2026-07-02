@@ -76,6 +76,31 @@ class Solution(object):
         return -1
 ```
 
+### 409. Longest Palindrome (Easy)
+
+🔗 LeetCode Folder: [`409-longest-palindrome`](../409-longest-palindrome)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+from collections import Counter
+class Solution(object):
+    def longestPalindrome(self, s):
+
+        freq = Counter(s)
+        ans = 0
+
+        for i in freq.values() :
+            ans += (i//2) * 2
+
+        if ans < len(s) :
+            ans += 1
+        
+        return ans
+```
+
 ### 680. Valid Palindrome Ii (Easy)
 
 🔗 LeetCode Folder: [`680-valid-palindrome-ii`](../680-valid-palindrome-ii)
