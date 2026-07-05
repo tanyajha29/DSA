@@ -38,4 +38,27 @@ class Solution(object):
         return "".join(res)
 ```
 
+### 1737. Maximum Nesting Depth Of The Parentheses (Easy)
+
+🔗 LeetCode Folder: [`1737-maximum-nesting-depth-of-the-parentheses`](../1737-maximum-nesting-depth-of-the-parentheses)
+
+- **Pattern:** Stack
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def maxDepth(self, s):
+        max_depth = 0
+        curr_depth = 0
+        
+        for ch in s :
+            if ch == "(" :
+                curr_depth += 1
+                max_depth = max(max_depth, curr_depth)
+            elif ch == ")":
+                curr_depth -= 1
+        return max_depth
+```
+
 <!-- AUTO-GENERATED END -->
