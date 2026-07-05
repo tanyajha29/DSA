@@ -109,6 +109,20 @@ class Solution(object):
         return -1
 ```
 
+### 205. Isomorphic Strings (Easy)
+
+🔗 LeetCode Folder: [`205-isomorphic-strings`](../205-isomorphic-strings)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```python
+class Solution(object):
+    def isIsomorphic(self, s, t):
+        return len(set(zip(s, t))) == len(set(s)) == len(set(t))
+```
+
 ### 345. Reverse Vowels Of A String (Easy)
 
 🔗 LeetCode Folder: [`345-reverse-vowels-of-a-string`](../345-reverse-vowels-of-a-string)
