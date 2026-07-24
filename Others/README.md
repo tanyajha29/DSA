@@ -123,6 +123,29 @@ class Solution(object):
         return len(set(zip(s, t))) == len(set(s)) == len(set(t))
 ```
 
+### 217. Contains Duplicate (Easy)
+
+🔗 LeetCode Folder: [`217-contains-duplicate`](../217-contains-duplicate)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet <Integer> set = new HashSet<>();
+        for(int i : nums){
+            if(set.contains(i)){
+                return true;
+            }
+            set.add(i);
+        }
+        return false;
+    }
+}
+```
+
 ### 345. Reverse Vowels Of A String (Easy)
 
 🔗 LeetCode Folder: [`345-reverse-vowels-of-a-string`](../345-reverse-vowels-of-a-string)
