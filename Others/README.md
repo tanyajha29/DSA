@@ -146,6 +146,32 @@ class Solution {
 }
 ```
 
+### 283. Move Zeroes (Easy)
+
+🔗 LeetCode Folder: [`283-move-zeroes`](../283-move-zeroes)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int j = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] != 0){
+                nums[j] = nums[i];
+                j++;
+            }
+        }
+        while(j < nums.length){
+            nums[j] = 0;
+            j++;
+        }
+    }
+}
+```
+
 ### 345. Reverse Vowels Of A String (Easy)
 
 🔗 LeetCode Folder: [`345-reverse-vowels-of-a-string`](../345-reverse-vowels-of-a-string)
