@@ -6,6 +6,33 @@ Placement-focused revision notes for Arrays.
 
 <!-- AUTO-GENERATED START -->
 
+### 80. Remove Duplicates From Sorted Array Ii (Medium)
+
+🔗 LeetCode Folder: [`80-remove-duplicates-from-sorted-array-ii`](../80-remove-duplicates-from-sorted-array-ii)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length < 2){
+            return nums.length;
+        }
+
+        int j = 2;
+        for( int i = 2; i < nums.length; i++){
+            if(nums[i] != nums[j - 2]){
+                nums[j] = nums[i];
+                j++;
+            }
+        }
+        return j;
+    }
+}
+```
+
 ### 948. Sort An Array (Medium)
 
 🔗 LeetCode Folder: [`948-sort-an-array`](../948-sort-an-array)
