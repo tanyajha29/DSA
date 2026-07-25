@@ -44,29 +44,22 @@ class Solution(object):
 - **Time Complexity:** TBD
 - **Space Complexity:** TBD
 
-```python
-class Solution(object):
-    def reverseWords(self, s):
-        n = len(s) - 1
-        result = ""
-        while n >= 0 :
-            while n >= 0 and s[n] == " " :
-                n -= 1
+```java
+class Solution {
+    public String reverseWords(String s) {
+        String[] words = s.trim().split("\\s+");
+        StringBuilder ans = new StringBuilder();
 
-            if n < 0 :
-                break
+        for(int i = words.length - 1; i >= 0; i--){
+            ans.append(words[i]);
 
-            end = n
-            while n >= 0 and s[n] != " " :
-                n -= 1
-
-            word = s[n + 1: end + 1]
-            if result != "" :
-                result += " "
-
-            result += word
-
-        return result
+            if(i != 0){
+                ans.append(" ");
+            }
+        }
+        return ans.toString();
+    }
+}
 ```
 
 ### 162. Find Peak Element (Medium)
