@@ -210,6 +210,58 @@ class Solution(object):
         return "".join(s)
 ```
 
+### 347. Top K Frequent Elements (Medium)
+
+🔗 LeetCode Folder: [`347-top-k-frequent-elements`](../347-top-k-frequent-elements)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        // 1. Count frequencies
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int n : nums){
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+
+        // 2. Create Buckets
+        List<Integer>[] bucket = new ArrayList[nums.length + 1];
+            for(int key : map.keySet()){
+                int freq = map.get(key);
+
+                if(bucket[freq] == null){
+                    bucket[freq] = new ArrayList<>();
+                }
+
+                bucket[freq].add(key);
+            }
+        
+        // 3. Traverse bucket from highest frequency
+
+        int [] ans = new int[k];
+        int index = 0;
+
+        for(int i = bucket.length - 1; i >= 0 && index < k; i--){
+            if(bucket[i] != null){
+                for(int num : bucket[i]){
+                    ans[index++] = num;
+
+                    if(index == k){
+                        break;
+                    }
+                }
+            }
+        }
+
+        return ans;
+    }
+}
+```
+
 ### 409. Longest Palindrome (Easy)
 
 🔗 LeetCode Folder: [`409-longest-palindrome`](../409-longest-palindrome)
