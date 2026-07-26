@@ -88,4 +88,40 @@ class Solution:
         return nums
 ```
 
+### 1019. Squares Of A Sorted Array (Easy)
+
+🔗 LeetCode Folder: [`1019-squares-of-a-sorted-array`](../1019-squares-of-a-sorted-array)
+
+- **Pattern:** Arrays
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+
+        int index = nums.length - 1;
+        int left = 0;
+        int right = nums.length - 1;
+        int[] ans = new int[nums.length];
+
+        while(left <= right){
+            int leftSquare = nums[left] * nums[left];
+            int rightSquare = nums[right] * nums[right];
+
+            if(leftSquare > rightSquare){
+                ans[index] = leftSquare;
+                left++;
+            }
+            else{
+                ans[index] = rightSquare;
+                right--;
+            }
+            index--;
+        }
+        return ans;
+    }
+}
+```
+
 <!-- AUTO-GENERATED END -->
