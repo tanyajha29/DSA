@@ -146,6 +146,37 @@ class Solution(object):
         return -1
 ```
 
+### 198. House Robber (Medium)
+
+🔗 LeetCode Folder: [`198-house-robber`](../198-house-robber)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int rob(int[] nums) {
+        
+        if(nums.length == 1){
+            return nums[0];
+        }
+
+        int prev2 = nums[0];
+        int prev1 = Math.max(prev2, nums[1]);
+
+        for(int i = 2; i < nums.length; i++){
+            int curr = Math.max(prev1, nums[i] + prev2);
+
+            prev2 = prev1;
+            prev1 = curr;
+        }
+
+        return prev1;
+    }
+}
+```
+
 ### 205. Isomorphic Strings (Easy)
 
 🔗 LeetCode Folder: [`205-isomorphic-strings`](../205-isomorphic-strings)
