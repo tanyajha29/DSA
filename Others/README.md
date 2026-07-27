@@ -290,6 +290,34 @@ class Solution {
 }
 ```
 
+### 322. Coin Change (Medium)
+
+🔗 LeetCode Folder: [`322-coin-change`](../322-coin-change)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        int [] dp = new int[amount + 1];
+        Arrays.fill(dp, amount + 1);
+        dp[0] = 0;
+
+        for(int i = 1; i <= amount; i++){
+            
+            for(int c : coins){
+                if(c <= i){
+                    dp[i] = Math.min(dp[i], dp[i - c] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1: dp[amount];
+    }
+}
+```
+
 ### 345. Reverse Vowels Of A String (Easy)
 
 🔗 LeetCode Folder: [`345-reverse-vowels-of-a-string`](../345-reverse-vowels-of-a-string)
