@@ -129,6 +129,47 @@ class Solution(object):
         return True
 ```
 
+### 147. Insertion Sort List (Medium)
+
+🔗 LeetCode Folder: [`147-insertion-sort-list`](../147-insertion-sort-list)
+
+- **Pattern:** General
+- **Time Complexity:** TBD
+- **Space Complexity:** TBD
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode insertionSortList(ListNode head) {
+        ListNode dummy = new ListNode(0);
+
+        while(head != null){
+            ListNode curr = head;
+            head = head.next;
+
+            ListNode prev = dummy;
+            while(prev.next != null && prev.next.val < curr.val){
+                prev = prev.next;
+            }
+
+            curr.next = prev.next;
+            prev.next = curr;
+        }
+
+        return dummy.next;
+    }
+}
+```
+
 ### 151. Reverse Words In A String (Medium)
 
 🔗 LeetCode Folder: [`151-reverse-words-in-a-string`](../151-reverse-words-in-a-string)
