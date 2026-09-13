@@ -6,42 +6,35 @@ Placement-focused revision notes for Sliding_Window.
 
 <!-- AUTO-GENERATED START -->
 
-### 152. Maximum Product Subarray (Medium)
+### 643. Maximum Average Subarray I (Easy)
 
-🔗 LeetCode Folder: [`152-maximum-product-subarray`](../152-maximum-product-subarray)
+🔗 LeetCode Folder: [`643-maximum-average-subarray-i`](../643-maximum-average-subarray-i)
 
 - **Pattern:** Sliding Window
 - **Time Complexity:** TBD
 - **Space Complexity:** TBD
 
-```python
-class Solution(object):
-    def maxProduct(self, nums):
-        max_product = nums[0]
-        min_product = nums[0]
-        result = nums[0]
+```java
+class Solution {
+    public double findMaxAverage(int[] nums, int k) {
+        int sum = 0;
 
-        for i in nums[1:] :
-            if i < 0 :
-                # why swap
-                '''multiplying by -ve number flips sign'''
-                max_product, min_product = min_product, max_product
-            
-            max_product = max(i, max_product * i)
-            min_product = min(i, min_product * i)
-            result = max(result, max_product)
+        // first window
+        for(int i = 0; i < k; i++){
+            sum += nums[i];
+        }
+        int maxSum = sum;
+        // sliding window 
+        for (int right = k; right < nums.length; right++){
+            sum += nums[right];
+            sum -= nums[right - k];
 
-        return result
+            maxSum = Math.max(maxSum, sum);
+        }
+
+        return (double) maxSum/k;
+    }
+}
 ```
-
-### 2868. Continuous Subarrays (Medium)
-
-🔗 LeetCode Folder: [`2868-continuous-subarrays`](../2868-continuous-subarrays)
-
-- **Pattern:** Sliding Window
-- **Time Complexity:** TBD
-- **Space Complexity:** TBD
-
-_No solution file found in the LeetSync folder._
 
 <!-- AUTO-GENERATED END -->
